@@ -1,3 +1,16 @@
 # Laporan Minggu 1 - Intro CIA
+# Konsep Dasar Confidentiality, Integrity, Availability (CIA)
+1. Confidentiality (Kerahasiaan)
+Confidentiality berkaitan dengan bagaimana sebuah informasi hanya dapat diakses oleh pihak yang berwenang. Tujuannya adalah mencegah akses yang tidak sah, baik oleh individu, kelompok, maupun sistem. Contoh penerapan nyata confidentiality antara lain penggunaan password, enkripsi data, dan sistem otorisasi. Tanpa aspek ini, informasi yang bersifat sensitif seperti data pribadi, rahasia bisnis, atau dokumen pemerintah bisa tersebar ke pihak yang tidak berkepentingan.
+2. Integrity (Integritas)
+Integrity memastikan bahwa informasi tetap akurat, utuh, dan tidak mengalami perubahan tanpa izin. Dengan kata lain, data yang tersimpan atau dikirimkan harus tetap sama seperti aslinya. Aspek ini sangat penting agar tidak terjadi manipulasi data yang dapat menimbulkan kerugian. Misalnya, perubahan angka dalam laporan keuangan, manipulasi hasil ujian, atau modifikasi file sistem. Penerapan integrity biasanya menggunakan mekanisme hashing, tanda tangan digital, atau version control.
+3. Availability (Ketersediaan)
+Availability merupakan keaadaan bahwa informasi dan sistem harus selalu dapat diakses ketika dibutuhkan oleh pihak yang berwenang. Percuma jika data aman dan akurat, tetapi tidak bisa diakses pada saat kritis. Contoh penerapannya adalah adanya backup data, penggunaan server yang andal, jaringan dengan redundansi, serta perlindungan dari serangan Denial of Service (DoS). Dengan menjaga availability, organisasi dapat memastikan layanan tetap berjalan tanpa gangguan.
 
-Isi laporan.
+Hubungan antar ketiga elemen tersebut adalah Meskipun Confidentiality, Integrity, dan Availability terlihat sebagai aspek yang terpisah, ketiganya saling terkait. Menjaga kerahasiaan tanpa memperhatikan integritas akan membuat data tidak dapat dipercaya. Menjaga integritas tanpa ketersediaan membuat informasi tidak berguna karena tidak bisa diakses. Begitu pula sebaliknya, availability tanpa confidentiality akan membuka peluang kebocoran informasi.
+
+# Peran kriptografi dalam kehidupan sehari-hari
+1. contoh penggunaan kriptografi pada aplikasi telegram
+Pada obrolan biasa (cloud chat), Telegram menggunakan kriptografi model client–server. Artinya, pesan kita dikunci saat dikirim ke server, lalu dibuka dan dikirim lagi ke penerima. Sistem ini membuat chat bisa diakses dari banyak perangkat, karena disimpan di cloud. Namun, secara teori, server Telegram masih bisa membaca isi pesan, meski mereka mengklaim sistemnya aman.
+Sedangkan pada Secret Chat, Telegram memakai kriptografi end-to-end. Ini lebih kuat, karena pesan hanya bisa dibuka oleh dua pihak yang mengobrol. Server Telegram pun tidak bisa membacanya. Selain itu, Secret Chat punya fitur tambahan seperti pesan yang bisa terhapus otomatis, tidak bisa diteruskan, dan ada peringatan jika lawan bicara mengambil screenshot.
+Untuk panggilan suara dan video, Telegram juga menggunakan kriptografi end-to-end. Mereka menambahkan cara unik agar pengguna bisa yakin sambungan benar-benar aman, yaitu dengan mencocokkan empat emoji yang muncul di layar masing-masing. Kalau sama, berarti panggilan terenkripsi dan tidak sedang disadap.
